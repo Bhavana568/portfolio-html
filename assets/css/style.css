@@ -312,6 +312,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+.nav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -1170,3 +1180,4 @@ section {
   }
 
 }
+
