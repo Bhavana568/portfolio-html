@@ -35,7 +35,12 @@
   <!-- ======= Header ======= -->
   <div class="sidebar">
     <h1 class="logo me-auto me-lg-0 mb-5"><a href="index.html">Bhavana</a></h1>
-    <input class="mb-5" type="text" placeholder="Search">
+    <div class="search">
+      <form class="search-form">
+        <input type="text" placeholder="Search">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
     <a href="index.html" class="sidebar-tabs">Home</a>
     <a href="about.html" class="sidebar-tabs sidebar-active">About</a>
     <a href="projects.html" class="sidebar-tabs">Projects</a>
@@ -203,8 +208,44 @@
 
         </div>
 
+       
       </div>
-    </section><!-- End Skills Section -->
+
+      <div id="piechart">
+        
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          // Load google charts
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+          
+          // Draw the chart and set the chart values
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+            ['Skills', 'Percentage'],
+            ['HTML', 10],
+            ['CSS', 9],
+            ['JS', 6],
+            ['TS', 5],
+            ['MONGODB', 4],
+            ['PS', 9],
+            ['ILLUSTRATOR', 8],
+            ['REACTJS', 6],
+            ['REDUX', 5],
+            ['NODEJS', 5],
+          ]);
+          
+            var options = {'title':'Skill Set', 'width':750, 'height':450};
+          
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+          }
+          </script>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </div>
+      
+    </section>
+    <!-- End Skills Section -->
 
     
 
